@@ -11,7 +11,7 @@
     "url": "git+https://github.com/jcam1/jpyc-transfer-csv.git"
   },
   "author": "",
-  "private":true,
+  "private": true,
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jcam1/jpyc-transfer-csv/issues"
