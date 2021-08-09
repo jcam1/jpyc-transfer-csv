@@ -1,0 +1,23 @@
+{
+  "name": "token-transfer-automation",
+  "version": "1.0.0",
+  "description": "token-transfer-automation",
+  "author": "Yosuke-Aramaki",
+  "private": true,
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "ethereumjs-common": "^1.5.2",
+    "ethereumjs-tx": "^2.1.0",
+    "truffle": "5.0.7",
+    "truffle-hdwallet-provider": "1.0.4",
+    "truffle-hdwallet-provider-privkey": "1.0.3",
+    "web3": "^1.2.1"
+  },
+  "scripts": {
+    "erc20erc20Mainnet": "node erc20Mainnet.js",
+    "nativeTokenSidechain": "node nativeTokenSidechain.js",
+    "erc20Sidechain": "node erc20Sidechain.js",
+    "batch": "node erc20BatchMainnet.js"
+  },
+  "devDependencies": {}
+}
