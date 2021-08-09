@@ -1,0 +1,20 @@
+{
+  "name": "jpyc-transfer-csv",
+  "version": "1.0.0",
+  "description": "ERC20トークンを送金するコードです。外部公開用。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcam1/jpyc-transfer-csv.git"
+  },
+  "author": "",
+  "private":true,
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcam1/jpyc-transfer-csv/issues"
+  },
+  "homepage": "https://github.com/jcam1/jpyc-transfer-csv#readme"
+}
