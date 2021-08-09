@@ -1,2 +1,2 @@
 # jpyc-transfer-csv
-ERC20トークンを送金するコードです。外部公開用。
+web3.jsとethertxを使ってERC20トークンを送金するコードです。外部公開用。
