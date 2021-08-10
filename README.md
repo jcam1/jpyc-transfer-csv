@@ -3,7 +3,7 @@ You can transfer ERC20 token based on information from csv file.\
 csvファイルの情報に基づいてERC20トークンを送金できます。JPYC以外も送金できます。
 
 ## Usage / 使い方
-Infra.ioでAPIキーを取得してください。[https://infura.io/](https://infura.io/)\
+infra.ioでAPIキーを取得してください。[https://infura.io/](https://infura.io/)\
 \
 gitをクローンしてディレクトリに移動します。
 ```
@@ -32,8 +32,14 @@ privatekey,
 // メインネットでerc20を送る場合
 npm run erc20Mainnet トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
 
+//exsample, Ethrteum Mainnet
+npm run erc20Mainnet 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 0xb4Ee570738Eb8894D333105c9F8F8Fb0a57af531 https://mainnet.infura.io/v3/APIKey 1
+
 // サイドチェーンでERC20トークンを送る場合
 npm run erc20Sidechain トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
+
+//exsample, Polygon Mainnet
+npm run erc20Mainnet 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 0xb4Ee570738Eb8894D333105c9F8F8Fb0a57af531 https://polygone-mainnet.infura.io/v3/APIKey 137
 ```
 ### ガス代の計算方法
 ```
@@ -49,7 +55,7 @@ JPYCは現在、Ethereum mainnetとMatic MainnetとRopsten Testnetに対応し�
 | -- | -- |
 | Ethereum Mainnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
 | Ropsten Testnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
-| Matic Mainnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
+| Polygon(Matic) Mainnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
 
 
 ### List of Chain ID
@@ -59,8 +65,8 @@ JPYCは現在、Ethereum mainnetとMatic MainnetとRopsten Testnetに対応し�
 | Ethereum Mainnet | 1 |
 | Ropsten Testnet | 3 |
 | xDai Chain | 100 |
-| Matic Mainnet | 137 |
-| Matic Testnet Mumbai | 80001 |
+| Polygon(Matic) Mainnet | 137 |
+| Polygon(Matic) Testnet Mumbai | 80001 |
 
 
 ## License / ライセンス
