@@ -1,6 +1,6 @@
 # jpyc-transfer-csv
 You can transfer ERC20 token based on information from csv file.\
-csvファイルの情報に基づいてERC20トークンを送金できます。JPYC以外のトークンも送金できます。
+csvファイルの情報に基づいてERC20トークンを送金できます。JPYC以外のトークンも送金できます。
 
 ## Usage / 使い方
 Infra.ioでAPIキーを取得してください。[https://infura.io/](https://infura.io/)\
