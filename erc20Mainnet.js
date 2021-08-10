@@ -4,12 +4,12 @@ async function app() {
   var EthereumTx = require('ethereumjs-tx').Transaction; //ethereumjsを用いてトランザクションに署名する
   
   //Infra.ioのAPIキーでweb3のインスタンを生成
-  let web3 = await new Web3(new Web3.providers.HttpProvider(process.argv[6])); //Infra.ioのAPIキー（https://mainnet.infura.io/apiキー）
+  let web3 = await new Web3(new Web3.providers.HttpProvider(process.argv[4])); //Infra.ioのAPIキー（https://mainnet.infura.io/apiキー）
   
   //addressListに送金先アドレスを格納
   let addressList = [];
   await csvtojson()
-  .fromFile(process.argv[2]) //送金先アドレスのcsvファイルのパス（./address.csvを指定）
+  .fromFile('./address.csv') //送金先アドレスのcsvファイルのパス
   .then((jsonObj)=>{
     addressList = jsonObj
   })
@@ -17,13 +17,13 @@ async function app() {
   //pkに秘送金者の密鍵を格納
   let pk = "";
   await csvtojson()
-  .fromFile(process.argv[5]) //送金者の秘密鍵のcvsのファイルのパス（./privatekey.csvを指定）
+  .fromFile('./privatekey.csv') //送金者の秘密鍵のcvsのファイルのパス
   .then((jsonObj)=>{
     pk = jsonObj[0]['privatekey']
   })
 
   //fromAddressに送金者のアドレスを格納
-  const fromAddress = process.argv[4]; //送金者のアドレス
+  const fromAddress = process.argv[3]; //送金者のアドレス
   
   //web3のwalletに送金者の秘密鍵とアドレスを設定
   await web3.eth.accounts.wallet.add({
@@ -40,7 +40,7 @@ async function app() {
     {"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function","signature":"0xa9059cbb"},
   ]
   //JPYCのコントラクトアドレス。ネットワークによって異なる。
-  let tokenAddress = process.argv[3]; //Etherscanで確認
+  let tokenAddress = process.argv[2]; //Etherscanで確認できる
   //ABIとコントラクトアドレスによってコントラクトのインスタンスを生成
   let contract = await new web3.eth.Contract(contractABI, tokenAddress);
 
@@ -77,7 +77,7 @@ async function app() {
     }
 
     //取引詳細とchainでトランザクションのインスタンを生成
-    var transaction = new EthereumTx(details, {chain: process.argv[7], hardfork: 'petersburg' })
+    var transaction = new EthereumTx(details, {chain: process.argv[5], hardfork: 'petersburg' })
     //秘密鍵をBufferに変換
     var privatekey = Buffer.from(pk, 'hex')
     //トランザクションに秘密鍵のBufferで署名

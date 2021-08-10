@@ -1,10 +1,10 @@
 # jpyc-transfer-csv
 You can transfer ERC20 token based on information from csv file.\
-csvファイルの情報に基づいてERC20トークンを送金できます。\JPYC以外のトークンも送金できます。
+csvファイルの情報に基づいてERC20トークンを送金できます。JPYC以外のトークンも送金できます。
 
 ## Usage / 使い方
 Infra.ioでAPIキーを取得してください。[https://infura.io/](https://infura.io/)\
-gitをクローンしてディレクトリに移動します。
+\gitをクローンしてディレクトリに移動します。
 ```
 git clone https://github.com/jcam1/jpyc-transfer-csv.git
 cd jpyc-transfer-csv
@@ -34,7 +34,7 @@ npm run erc20Mainnet トークンのコントラクトアドレス 送金者の�
 // サイドチェーンでERC20トークンを送る場合
 npm run erc20Sidechain トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
 ```
-## ガス代の計算方法
+### ガス代の計算方法
 ```
 var gasPrice = await web3.eth.getGasPrice()
 var gasEstimate = await contract.methods.transfer(addressList[i]['address'], addressList[i]['amount']).estimateGas({ from: fromAddress })
@@ -43,7 +43,7 @@ var gasLimitHex = await web3.utils.toHex(gasEstimate)
 ```
 
 ### List of JPYC Contract Address
-jpycは現在Ethereum mainnetとMatic MainnetとRopsten Testnetに対応しております。
+JPYCは現在、Ethereum mainnetとMatic MainnetとRopsten Testnetに対応しております。
 | Name | Contract Address |
 | -- | -- |
 | Ethereum Mainnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
@@ -52,7 +52,7 @@ jpycは現在Ethereum mainnetとMatic MainnetとRopsten Testnetに対応して�
 
 
 ### List of Chain ID
-jpycは現在Ethereum mainnetとMatic MainnetとRopsten Testnetに対応しております。
+JPYCは現在、Ethereum mainnetとMatic MainnetとRopsten Testnetに対応しております。
 | Name | Chain ID |
 | -- | -- |
 | Ethereum Mainnet | 1 |
