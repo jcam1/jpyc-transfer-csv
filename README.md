@@ -31,10 +31,10 @@ privatekey,
 下記を参考にコマンドを実行してください。
 ```
 // メインネットでerc20を送る場合
-npm run erc20Mainnet トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
+npm run erc20Mainnet トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー mainnet
 
 //exsample, Ethrteum Mainnet
-npm run erc20Mainnet 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 0xb4Ee570738Eb8894D333105c9F8F8Fb0a57af531 https://mainnet.infura.io/v3/APIKey 1
+npm run erc20Mainnet 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 0xb4Ee570738Eb8894D333105c9F8F8Fb0a57af531 https://mainnet.infura.io/v3/APIKey mainnet
 
 // サイドチェーンでERC20トークンを送る場合
 npm run erc20Sidechain トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
