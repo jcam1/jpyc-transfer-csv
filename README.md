@@ -4,7 +4,8 @@ csvファイルの情報に基づいてERC20トークンを送金できます。
 
 ## Usage / 使い方
 Infra.ioでAPIキーを取得してください。[https://infura.io/](https://infura.io/)\
-\gitをクローンしてディレクトリに移動します。
+\
+gitをクローンしてディレクトリに移動します。
 ```
 git clone https://github.com/jcam1/jpyc-transfer-csv.git
 cd jpyc-transfer-csv
