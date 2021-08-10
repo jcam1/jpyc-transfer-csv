@@ -14,7 +14,7 @@ cd jpyc-transfer-csv
 ```
 npm i
 ```
-下記を参考にcsvファイルの中身を変更してください。
+下記を参考にcsvファイルの中身を変更してください。一括で送金されます。
 ```address.csv
 ex)
 address,amount,
