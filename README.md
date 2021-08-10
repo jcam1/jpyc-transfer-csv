@@ -3,11 +3,17 @@ You can transfer ERC20 token based on information from csv file.\
 csvファイルの情報に基づいてERC20トークンを送金できます。\JPYC以外のトークンも送金できます。
 
 ## Usage / 使い方
-
-You can make csv file by following format below.\
-コマンドを実行するフォルダ直下に下記の名前でcvsファイルを作成してください。\
-address.csv, privatekey.csv
-下記を参考にcsvファイルの中身を記述してください。
+Infra.ioでAPIキーを取得してください。[https://infura.io/](https://infura.io/)\
+gitをクローンしてディレクトリに移動します。
+```
+git clone https://github.com/jcam1/jpyc-transfer-csv.git
+cd jpyc-transfer-csv
+```
+必要なパッケージをインストールします。
+```
+npm i
+```
+下記を参考にcsvファイルの中身を変更してください。
 ```address.csv
 ex)
 address,amount,
@@ -20,36 +26,37 @@ ex)
 privatekey,
 6ea8a9b23f...276926917c46,
 ```
-
-### リモートで使用する場合
+下記を参考にコマンドを実行してください。
 ```
-// メインネットでerc20 を送る場合
-npx -p token-transfer-csv -c "erc20Mainnet　トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId"
-
-// サイドチェーンでERC20トークンを送る場合
-npx -p jpyc-transfer-csv -c "erc20Sidechain トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId"
-
-// example
-npx -p jpyc-transfer-csv -c "npm run dev ./address.csv 0xA28ac1acBa964496c9A621a28ad987f19003881A 0xb4Ee570738Eb8894D333105c9F8F8Fb0a57af531 B2FC108CAB5BC897E9095CC3356DF0001112224D9DF8967F018B3E0C3CA208D8 https://mainnet.infura.io/v3/APIKey mainet"
-```
-
-### ローカルで使用する場合
-```
-git clone <https://github.com/jcam1/jpyc-transfer-csv.git>
-cd jpyc-trnsfer-csv
-npm i //必要なパッケージをインストール
-
-// メインネットでerc20 を送る場合
+// メインネットでerc20を送る場合
 npm run erc20Mainnet トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
 
 // サイドチェーンでERC20トークンを送る場合
 npm run erc20Sidechain トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
 ```
+## ガス代の計算方法
+```
+var gasPrice = await web3.eth.getGasPrice()
+var gasEstimate = await contract.methods.transfer(addressList[i]['address'], addressList[i]['amount']).estimateGas({ from: fromAddress })
+var gasPriceHex = await web3.utils.toHex(gasPrice)
+var gasLimitHex = await web3.utils.toHex(gasEstimate)
+```
+
+### List of JPYC Contract Address
+jpycは現在Ethereum mainnetとMatic MainnetとRopsten Testnetに対応しております。
+| Name | Contract Address |
+| -- | -- |
+| Ethereum Mainnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
+| Ropsten Testnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
+| Matic Mainnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
+
 
 ### List of Chain ID
+jpycは現在Ethereum mainnetとMatic MainnetとRopsten Testnetに対応しております。
 | Name | Chain ID |
 | -- | -- |
-| Ethereum mainnet | 1 |
+| Ethereum Mainnet | 1 |
+| Ropsten Testnet | 3 |
 | xDai Chain | 100 |
 | Matic Mainnet | 137 |
 | Matic Testnet Mumbai | 80001 |
