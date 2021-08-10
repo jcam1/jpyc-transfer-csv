@@ -1,11 +1,13 @@
 # jpyc-transfer-csv
 You can transfer ERC20 token based on information from csv file.\
-csvファイルの情報に基づいてERC20トークンを送金できます。¥JPYC以外のトークンも送金できます。
+csvファイルの情報に基づいてERC20トークンを送金できます。\JPYC以外のトークンも送金できます。
 
 ## Usage / 使い方
 
 You can make csv file by following format below.\
-下記の例に従ってcvsファイルを作成してください。
+コマンドを実行するフォルダ直下に下記の名前でcvsファイルを作成してください。\
+address.csv, privatekey.csv
+下記を参考にcsvファイルの中身を記述してください。
 ```address.csv
 ex)
 address,amount,
@@ -21,11 +23,11 @@ privatekey,
 
 ### リモートで使用する場合
 ```
-// Ethereum mainnet で erc20 を送る場合
-npx -p token-transfer-csv -c "erc20Mainnet 送金先アドレスのcvsファイルのパス トークンのコントラクトアドレス 送金者のアドレス 送金者の秘密鍵のcvsファイルのパス InfraのAPIキー chainId"
+// メインネットでerc20 を送る場合
+npx -p token-transfer-csv -c "erc20Mainnet　トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId"
 
 // サイドチェーンでERC20トークンを送る場合
-npx -p jpyc-transfer-csv -c "erc20Sidechain 送金先アドレスのcvsファイルのパス トークンのコントラクトアドレス 送金者のアドレス 送金者の秘密鍵のcvsファイルのパス InfraのAPIキー chainId"
+npx -p jpyc-transfer-csv -c "erc20Sidechain トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId"
 
 // example
 npx -p jpyc-transfer-csv -c "npm run dev ./address.csv 0xA28ac1acBa964496c9A621a28ad987f19003881A 0xb4Ee570738Eb8894D333105c9F8F8Fb0a57af531 B2FC108CAB5BC897E9095CC3356DF0001112224D9DF8967F018B3E0C3CA208D8 https://mainnet.infura.io/v3/APIKey mainet"
@@ -33,15 +35,15 @@ npx -p jpyc-transfer-csv -c "npm run dev ./address.csv 0xA28ac1acBa964496c9A621a
 
 ### ローカルで使用する場合
 ```
-git clone https://github.com/jcam1/jpyc-transfer-csv.git
+git clone <https://github.com/jcam1/jpyc-transfer-csv.git>
 cd jpyc-trnsfer-csv
 npm i //必要なパッケージをインストール
 
-// Ethereum mainnet で erc20 を送る場合
-npm run erc20Mainnet 送金先アドレスのcvsファイルのパス トークンのコントラクトアドレス 送金者のアドレス 送金者の秘密鍵のcvsファイルのパス InfraのAPIキー chainId
+// メインネットでerc20 を送る場合
+npm run erc20Mainnet トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
 
 // サイドチェーンでERC20トークンを送る場合
-npm run erc20Sidechain 送金先アドレスのcvsファイルのパス トークンのコントラクトアドレス 送金者のアドレス 送金者の秘密鍵のcvsファイルのパス InfraのAPIキー chainId
+npm run erc20Sidechain トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
 ```
 
 ### List of Chain ID
