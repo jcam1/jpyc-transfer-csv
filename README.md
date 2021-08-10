@@ -14,14 +14,15 @@ cd jpyc-transfer-csv
 ```
 npm i
 ```
-下記を参考にcsvファイルの中身を変更してください。一括で送金されます。
+下記を参考にcsvファイルの中身を変更してください。一括で送金されます。\
+./address.csv
 ```address.csv
 ex)
 address,amount,
 0xa443159f8F323e3BE71Ee77cb06D88d766cba596,1
 0x82fC7Cbd59b931258bcD97826EFa5Fff21aA626D,2
 ```
-
+./address.csv
 ```privatekey.csv
 ex)
 privatekey,
