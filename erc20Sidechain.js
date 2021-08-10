@@ -107,7 +107,6 @@ async function app() {
       console.log('successfully transferred tokens to ' + addressList[i]['address'] +', transactionHash is ' + receipt.transactionHash)
     })
   }
-
   return
 }
 

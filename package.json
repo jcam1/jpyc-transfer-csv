@@ -11,7 +11,7 @@
     "web3": "^1.2.1"
   },
   "scripts": {
-    "nativeTokenSidechain": "node nativeTokenSidechain.js",
+    "erc20Mainnet": "node erc20Mainnet.js",
     "erc20Sidechain": "node erc20Sidechain.js"
   },
   "devDependencies": {}
