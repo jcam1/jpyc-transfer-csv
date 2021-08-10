@@ -51,7 +51,7 @@ async function app() {
     'mainnet',
     {
       name: 'customchain',
-      chainId: Number(process.argv[5]) //chainID（Matic Mainnetの場合は137
+      chainId: Number(process.argv[5]) //chainID（Xdai chainの場合は100、Matic Mainnetの場合は137）
     },
     'petersburg'
   )

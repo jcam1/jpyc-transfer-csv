@@ -51,20 +51,22 @@ var gasLimitHex = await web3.utils.toHex(gasEstimate)
 ```
 
 ### List of JPYC Contract Address
-JPYCは現在、Ethereum mainnetとxDAIとMatic Mainnetに対応しております。
 | Name | Contract Address |
 | -- | -- |
 | Ethereum Mainnet | 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 |
+| Ropsten Testnet |  |
+| Rinkeby Testnet |  |
 | xDAI chain | 0x417602f4fbdd471A431Ae29fB5fe0A681964C11b |
 | Polygon(Matic) Mainnet | 0x6AE7Dfc73E0dDE2aa99ac063DcF7e8A63265108c |
+| Polygon(Matic) Testnet Mumbai |  |
 
 
-### List of Chain ID
-JPYCは現在、Ethereum mainnetとMatic MainnetとRopsten TestnetとRinkeby Testnetに対応しております。
-| Name | Chain ID |
+### List of Chain ID ans Network ID
+| Name | Chain ID | Network ID
 | -- | -- |
 | Ethereum Mainnet | 1 |
 | Ropsten Testnet | 3 |
+| Rinkeby Testnet | 4 |
 | xDai Chain | 100 |
 | Polygon(Matic) Mainnet | 137 |
 | Polygon(Matic) Testnet Mumbai | 80001 |
