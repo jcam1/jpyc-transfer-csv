@@ -62,7 +62,7 @@ var gasLimitHex = await web3.utils.toHex(gasEstimate)
 
 
 ### List of Chain ID ans Network ID
-| Name | Chain ID | Network ID
+| Name | Chain ID |
 | -- | -- |
 | Ethereum Mainnet | 1 |
 | Ropsten Testnet | 3 |
