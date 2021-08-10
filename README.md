@@ -40,7 +40,7 @@ npm run erc20Mainnet 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 0xb4Ee570738Eb88
 npm run erc20Sidechain トークンのコントラクトアドレス 送金者のアドレス InfraのAPIキー chainId
 
 //exsample, Polygon Mainnet
-npm run erc20Mainnet 0x2370f9d504c7a6E775bf6E14B3F12846b594cD53 0xb4Ee570738Eb8894D333105c9F8F8Fb0a57af531 https://polygone-mainnet.infura.io/v3/APIKey 137
+npm run erc20Mainnet 0x6AE7Dfc73E0dDE2aa99ac063DcF7e8A63265108c 0xb4Ee570738Eb8894D333105c9F8F8Fb0a57af531 https://polygone-mainnet.infura.io/v3/APIKey 137
 ```
 ### Calculation of gas bill / ガス代の計算方法
 ```
