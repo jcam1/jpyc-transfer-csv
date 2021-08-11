@@ -58,7 +58,7 @@ var gasLimitHex = await web3.utils.toHex(gasEstimate)
 | Polygon(Matic) Mainnet | 0x6AE7Dfc73E0dDE2aa99ac063DcF7e8A63265108c |
 
 
-### List of Chain ID ans Network ID
+### List of Chain ID
 | Name | Chain ID |
 | -- | -- |
 | Ethereum Mainnet | 1 |
