@@ -18,7 +18,9 @@
     "csv",
     "erc20",
     "token",
-    "web3"
+    "web3",
+    "jcam1",
+    "ocurima"
   ],
   "dependencies": {
     "csvtojson": "^2.0.10",
