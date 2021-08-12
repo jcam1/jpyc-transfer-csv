@@ -1,9 +1,25 @@
 {
-  "name": "jpyc-transfer-automation",
+  "name": "jpyc-transfer-csv",
   "version": "1.0.0",
-  "description": "jpyc-transfer-automation",
+  "description": "transfer ERC20 token based on information from csv file",
   "author": "shihou-nagabuchi",
-  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type":"git",
+    "url":"git+https://github.com/jcam1/jpyc-transfer-csv"
+  },
+  "bugs":{
+    "url":"https://github.com/jcam1/jpyc-transfer-csv/issues"
+  },
+  "homepage": "https://github.com/jcam1/jpyc-transfer-csv#readme",
+  "keywords": [
+    "jpyc",
+    "transfer",
+    "csv",
+    "erc20",
+    "token",
+    "web3"
+  ],
   "dependencies": {
     "csvtojson": "^2.0.10",
     "ethereumjs-common": "^1.5.2",
